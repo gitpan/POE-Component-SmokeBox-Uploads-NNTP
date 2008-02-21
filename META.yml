@@ -20,4 +20,4 @@ requires:
   Email::Simple: 2.003
   POE: 0.38
   POE::Component::Client::NNTP: 2.04
-version: 0.01
+version: 0.02

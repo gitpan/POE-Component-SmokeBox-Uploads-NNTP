@@ -6,7 +6,7 @@ use POE qw(Component::Client::NNTP);
 use Email::Simple;
 use vars qw($VERSION);
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub spawn {
   my $package = shift;
@@ -14,7 +14,7 @@ sub spawn {
   $opts{lc $_} = delete $opts{$_} for keys %opts;
   croak "$package requires an 'event' argument\n" unless $opts{event};
   $opts{nntp} = 'nntp.perl.org' unless $opts{nntp};
-  $opts{group} = 'perl.cpan.testers' unless $opts{group};
+  $opts{group} = 'perl.cpan.uploads' unless $opts{group};
   my $options = delete $opts{options};
   my $self = bless \%opts, $package;
   $self->{session_id} = POE::Session->create(
@@ -192,7 +192,7 @@ POE::Component::SmokeBox::Uploads::NNTP - Obtain uploaded CPAN modules via NNTP.
 =head1 DESCRIPTION
 
 POE::Component::SmokeBox::Uploads::NNTP is a L<POE> component that alerts newly uploaded CPAN
-distributions. It obtains this information from polling an NNTP server ( by default the C<perl.cpan.testers> group on C<nntp.perl.org> ).
+distributions. It obtains this information from polling an NNTP server ( by default the C<perl.cpan.uploads> group on C<nntp.perl.org> ).
 
 L<POE::Component::Client::NNTP> is used to handle the interaction with the NNTP server.
 
@@ -259,3 +259,4 @@ L<POE::Component::Client::NNTP>
 
 L<http://www.nntp.perl.org/>
 
+L<http://log.perl.org/2008/02/goodbye-cpan-te.html>
