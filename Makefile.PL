@@ -1,3 +1,4 @@
+use strict;
 use inc::Module::Install;
 name 'POE-Component-SmokeBox-Uploads-NNTP';
 author 'Chris Williams <chris@bingosnet.co.uk>';
@@ -5,6 +6,7 @@ license 'perl';
 version_from 'lib/POE/Component/SmokeBox/Uploads/NNTP.pm';
 abstract_from 'lib/POE/Component/SmokeBox/Uploads/NNTP.pm';
 build_requires 'Test::More' => 0.47;
+requires 'warnings::compat' => 0 if $] < 5.006;
 requires 'Carp' => 0;
 requires 'Email::Simple' => 2.003;
 requires 'POE' => 0.38;

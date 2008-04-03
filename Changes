@@ -1,6 +1,9 @@
 Change log for POE::Component::SmokeBox::Uploads::NNTP
 ======================================================
 
+0.04	Thu Apr  3 12:15:52 BST 2008
+	- Kwalitee fixes.
+
 0.02	Thu Feb 21 18:36:05 GMT 2008
 	- Changed the default group to perl.cpan.uploads
 

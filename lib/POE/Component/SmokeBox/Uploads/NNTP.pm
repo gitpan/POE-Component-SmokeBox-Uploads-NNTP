@@ -1,12 +1,13 @@
 package POE::Component::SmokeBox::Uploads::NNTP;
 
 use strict;
+use warnings;
 use Carp;
 use POE qw(Component::Client::NNTP);
 use Email::Simple;
 use vars qw($VERSION);
 
-$VERSION = '0.02';
+$VERSION = '0.04';
 
 sub spawn {
   my $package = shift;
