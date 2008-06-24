@@ -1,6 +1,9 @@
 Change log for POE::Component::SmokeBox::Uploads::NNTP
 ======================================================
 
+0.06	Tue Jun 24 13:28:01 BST 2008
+	- Added LICENSE information.
+
 0.04	Thu Apr  3 12:15:52 BST 2008
 	- Kwalitee fixes.
 

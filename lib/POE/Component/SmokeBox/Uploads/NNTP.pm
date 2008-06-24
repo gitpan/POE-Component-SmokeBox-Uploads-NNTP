@@ -7,7 +7,7 @@ use POE qw(Component::Client::NNTP);
 use Email::Simple;
 use vars qw($VERSION);
 
-$VERSION = '0.04';
+$VERSION = '0.06';
 
 sub spawn {
   my $package = shift;
@@ -251,6 +251,12 @@ Suitable for feeding to the smoke tester of your choice.
 =head1 AUTHOR
 
 Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
+
+=head1 LICENSE
+
+Copyright (C) Chris Williams
+
+This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
