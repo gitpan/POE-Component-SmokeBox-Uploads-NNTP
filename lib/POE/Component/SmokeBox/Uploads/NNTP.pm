@@ -7,7 +7,7 @@ use POE qw(Component::Client::NNTP);
 use Email::Simple;
 use vars qw($VERSION);
 
-$VERSION = '0.06';
+$VERSION = '0.08';
 
 sub spawn {
   my $package = shift;
@@ -78,7 +78,7 @@ sub _start {
   $kernel->refcount_increment( $sender_id, __PACKAGE__ );
   $self->{sender_id} = $sender_id;
   $self->{nntpclient} = POE::Component::Client::NNTP->spawn( 'nntp' . $self->{session_id}, 
-	{ NNTPServer => $self->{nntp}, } );
+	{ NNTPServer => $self->{nntp}, Port => $self->{nntp_port} } );
   return;
 }
 
